@@ -31,7 +31,6 @@ Open-Meteo (CSV)
 → Spark MLlib (regresión comparada)
 → Modelo ganador guardado
 
-
 ## 4. Resultados principales
 
 ### Dimensión Clima (Alahin Reyme Ticona Veliz)
@@ -61,9 +60,7 @@ Open-Meteo (CSV)
 1. Clonar este repositorio
 2. Tener Docker + `lambda26/pyspark` corriendo
 3. Colocar los CSV de Open-Meteo en la ruta de datos del contenedor
-4. Ejecutar los notebooks:
-   - `notebooks/01_pipeline_completo_u1.ipynb` (dimensión clima)
-   - Notebook de calidad del aire (dimensión aire)
+4. Ejecutar los notebooks de cada dimensión
 
 ## 6. Estructura del repositorio
 
