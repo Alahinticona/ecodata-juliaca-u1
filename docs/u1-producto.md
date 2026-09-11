@@ -1,68 +1,41 @@
 # Producto Unidad 1 – EcoData (Juliaca)
 
-**Estudiante:** [Alahin Reyme Ticona Veliz] 
-**Estudiante:** [VARGAS MARICHI lanzeloth]  
 **Equipo:** EcoData  
-**Dimensión U1:** Influencia de variables climáticas sobre condiciones ambientales en Juliaca (enfoque predictivo)
+**Arquitectura:** Lambda (Batch)  
+**Integrantes:**  
+- Alahin Reyme Ticona Veliz  
+- Vargas Marichi Lanzeloth
 
 ---
 
-## 1. Pregunta central y dimensión U1
+## 1. Pregunta central del equipo
+¿Cómo anticipar condiciones de riesgo ambiental en Juliaca combinando datos climáticos y de calidad del aire mediante un pipeline batch distribuido?
 
-**Pregunta de negocio del equipo:**  
-¿Cómo anticipar episodios de riesgo ambiental en Juliaca combinando datos climáticos y de calidad del aire?
+## 2. Dimensiones U1
 
-**Mi dimensión U1 (predictiva batch):**  
-Construir un pipeline batch distribuido que limpie, valide y particione datos climáticos de Open-Meteo y entrene un modelo de regresión capaz de predecir temperatura a partir de viento, humedad y variables temporales, dejando la base lista para extenderse a predicción de PM2.5/PM10.
+| Integrante | Dimensión | Variable objetivo |
+|------------|-----------|-------------------|
+| Alahin Reyme Ticona Veliz | Predicción climática | temperature_2m |
+| Vargas Marichi Lanzeloth | Calidad del aire y alertas | pm2_5 / pm10 / nivel_riesgo |
 
----
+## 3. Arquitectura
+**Lambda**. La Unidad 1 implementa la ruta Batch. La ruta Speed se desarrolla en Unidad 2.
 
-## 2. Arquitectura seleccionada
+## 4. Pipeline común
+Open-Meteo → Limpieza + Calidad → Parquet particionado (Gold) → Spark MLlib → Modelo guardado
 
-**Lambda**
+## 5. Resultados principales
 
-Se eligió Lambda porque el proyecto necesita:
-- Análisis histórico y entrenamiento de modelos (Batch)
-- Alertas en tiempo casi real (Speed – Unidad 2)
+### Dimensión Clima (Alahin)
+- Registros: 26 304
+- Mejor modelo: RandomForest
+- RMSE: 1.4351 | R²: 0.9180 | MAE: 1.1220
+- Variable más importante: hour (0.636)
 
-La Unidad 1 implementa solo la ruta Batch.
+### Dimensión Aire (Lanzeloth)
+- Registros: (completar)
+- Mejor modelo: (completar)
+- Métricas: (completar)
 
----
-
-## 3. Pipeline implementado
-
-| Capa   | Contenido                                      | Tecnología      |
-|--------|------------------------------------------------|-----------------|
-| Bronze | CSV crudos de Open-Meteo                       | Descarga API    |
-| Silver | Schema explícito, 0 nulos, 0 duplicados        | PySpark         |
-| Gold   | Parquet particionado por año y mes             | partitionBy     |
-| ML     | VectorAssembler + 3 LR + RandomForest + guardado | Spark MLlib   |
-
----
-
-## 4. Controles de calidad aplicados (S3)
-
-- Schema explícito
-- Nulos = 0
-- Duplicados = 0 (por `time`)
-- Filtrado de rango físico
-- Verificación de conteo ida y vuelta
-- PartitionFilters confirmado en `explain(True)`
-
----
-
-## 5. Componente ML (S4)
-
-- **Objetivo:** temperature_2m
-- **Predictores:** wind_speed_10m, wind_direction_10m, relative_humidity_2m, hour, mes
-- **Modelos comparados:** LR sin reg, LR Ridge, LR ElasticNet, RandomForest
-- **Métricas:** RMSE, R², MAE
-- **Modelo guardado:** artifacts/modelo_temperatura_ganador
-
----
-
-## 6. Conclusiones
-
-Se completó el pipeline batch de la Unidad 1: datos confiables en capa Gold y primer modelo de regresión distribuida comparado y guardado.
-
-**Siguiente paso (Unidad 2):** streaming + inferencia en tiempo real + alertas.
+## 6. Conclusión
+Se completó el pipeline batch de la Unidad 1 con dos dimensiones complementarias. La base está lista para incorporar streaming e inferencia en tiempo real en la Unidad 2.

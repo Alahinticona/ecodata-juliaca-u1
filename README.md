@@ -2,55 +2,39 @@
 
 **Proyecto Sello – Unidad 1 · Big Data**  
 **Arquitectura:** Lambda (Batch)  
-**Estudiante:** [Alahin Reyme Ticona Veliz]  
-**Estudiante:** [VARGAS MARICHI lanzeloth] 
 **Equipo:** EcoData
+
+| Integrante | Dimensión U1 |
+|------------|--------------|
+| **Alahin Reyme Ticona Veliz** | Predicción de temperatura a partir de variables climáticas |
+| **Vargas Marichi Lanzeloth** | Análisis y predicción de calidad del aire (PM2.5/PM10) orientado a alertas |
 
 ---
 
-## 1. Pregunta central de negocio
+## Pregunta central del equipo
 
-¿Cómo anticipar condiciones climáticas y de calidad del aire en Juliaca mediante un pipeline batch distribuido que permita entrenar modelos predictivos y, en una segunda etapa, emitir alertas tempranas?
+¿Cómo anticipar condiciones de riesgo ambiental en Juliaca combinando datos climáticos y de calidad del aire mediante un pipeline batch distribuido?
 
-## 2. Arquitectura seleccionada
+## Arquitectura
 
-Se adoptó la **arquitectura Lambda** porque el caso de negocio requiere simultáneamente:
+**Lambda**:  
+- Ruta Batch (Unidad 1) → análisis histórico + modelos  
+- Ruta Speed (Unidad 2) → alertas en tiempo real
 
-- **Capa Batch:** análisis histórico y entrenamiento de modelos.
-- **Capa Speed (Unidad 2):** alertas en tiempo casi real.
+## Resultados principales (Unidad 1)
 
-## 3. Pipeline implementado (Unidad 1)
+### Dimensión Clima (Alahin)
+| Métrica | Valor |
+|---------|-------|
+| Registros | 26 304 |
+| Mejor modelo | RandomForest |
+| RMSE | 1.4351 |
+| R² | 0.9180 |
+| MAE | 1.1220 |
 
-Open-Meteo (CSV)
-→ Limpieza + controles de calidad (Silver)
-→ Parquet particionado por año/mes (Gold)
-→ Spark MLlib (regresión comparada)
-→ Modelo ganador guardado
-text
-
-
-## 4. Resultados principales
-
-| Elemento                        | Resultado      |
-|--------------------------------|----------------|
-| Registros clima (Gold)         | 26 304         |
-| Nulos / Duplicados             | 0 / 0          |
-| Particionamiento               | año + mes      |
-| PartitionFilters               | Verificado     |
-| Mejor modelo                   | (completar)    |
-| RMSE / R² / MAE                | (completar)    |
-
-## 5. Cómo reproducir
-
-1. Clonar este repositorio
-2. Tener Docker + `lambda26/pyspark` corriendo
-3. Colocar los CSV de Open-Meteo en la ruta de datos del contenedor
-4. Ejecutar el notebook: `notebooks/01_pipeline_completo_u1.ipynb`
-
-## 6. Estructura del repositorio
-
-- `notebooks/` → Pipeline completo reproducible
-- `docs/u1-producto.md` → Documentación formal de la dimensión U1
-- `diagrams/` → Arquitectura Lambda
-- `data/` → Instrucciones de los datasets
-- `artifacts/` → Modelos y salidas (ignorados por tamaño)
+### Dimensión Calidad del Aire (Lanzeloth)
+| Métrica | Valor |
+|---------|-------|
+| Registros | (completar) |
+| Mejor modelo | (completar) |
+| Métricas | (completar) |

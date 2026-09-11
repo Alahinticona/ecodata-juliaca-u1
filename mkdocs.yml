@@ -1,0 +1,30 @@
+site_name: EcoData – Unidad 1
+site_description: Sistema de Alerta Temprana de Calidad del Aire – Juliaca
+site_author: Equipo EcoData
+
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: light blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - content.code.copy
+
+nav:
+  - Inicio: index.md
+  - Arquitectura: arquitectura.md
+  - Dimensión Clima (Alahin): dimension-alahin.md
+  - Dimensión Aire (Lanzeloth): dimension-lanzeloth.md
+  - Producto U1: u1-producto.md
+  - Resultados: resultados.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - attr_list
