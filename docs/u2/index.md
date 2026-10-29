@@ -16,7 +16,7 @@ Open-Meteo (clima) ─> atmos-clima ──┘             └─> atmos-negocio 
 | Aire | Lanzeloth | ¿Se predice el PM2.5 de la próxima hora mejor que la persistencia? | `atmos-aire` |
 | Clima | Alahin | ¿Se predice la temperatura de la próxima hora mejor que la persistencia? | `atmos-clima` |
 
-Páginas: [Brief](brief.md) · [Dimensión aire](dimension-aire.md) · [Dimensión clima](dimension-clima.md).
+Páginas: [Brief del proyecto](../brief.md) · [Dimensión aire](dimension-aire.md) · [Dimensión clima](dimension-clima.md).
 
 ## Por qué se reformuló la pregunta
 La pregunta inicial («¿cuándo superará el umbral?») no tiene casos positivos: en 2023 la norma peruana de PM2.5 nunca se excedió. Se reemplazó por un pronóstico a +1 h comparado con la persistencia, medible en todas las horas.
