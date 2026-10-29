@@ -27,6 +27,7 @@ nav:
       - Producto U2 (resumen): u2/index.md
       - Dimensión Aire (Lanzeloth): u2/dimension-aire.md
       - Dimensión Clima (Alahin): u2/dimension-clima.md
+      - Operación, escalado y costos: u2/operacion.md
 
 markdown_extensions:
   - tables
