@@ -1,0 +1,1160 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Sistema de Alerta Temprana de Calidad del Aire y Clima - Juliaca">
+      
+      
+        <meta name="author" content="Equipo EcoData">
+      
+      
+        <link rel="canonical" href="https://alahinticona.github.io/ecodata-juliaca-u1/u2/operacion/">
+      
+      
+        <link rel="prev" href="../dimension-clima/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Operación, escalado y costos - EcoData - Unidad 1 y 2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#operacion-ingesta-alertas-observabilidad-escalado-y-costos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EcoData - Unidad 1 y 2" class="md-header__button md-logo" aria-label="EcoData - Unidad 1 y 2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EcoData - Unidad 1 y 2
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Operación, escalado y costos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Alahinticona/ecodata-juliaca-u1" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Alahinticona/ecodata-juliaca-u1
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EcoData - Unidad 1 y 2" class="md-nav__button md-logo" aria-label="EcoData - Unidad 1 y 2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EcoData - Unidad 1 y 2
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Alahinticona/ecodata-juliaca-u1" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Alahinticona/ecodata-juliaca-u1
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brief/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Brief técnico-analítico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Producto Unidad 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Producto Unidad 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../u1-producto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Producto U1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dimension-alahin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dimensión Clima (Alahin)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dimension-lanzeloth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dimensión Aire (Lanzeloth)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resultados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Producto Unidad 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Producto Unidad 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Producto U2 (resumen)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dimension-aire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dimensión Aire (Lanzeloth)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dimension-clima/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dimensión Clima (Alahin)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operación, escalado y costos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operación, escalado y costos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ingesta-con-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Ingesta con Kafka
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-alertas-y-umbrales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Alertas y umbrales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Alertas y umbrales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alertas-de-negocio-implementadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alertas de negocio (implementadas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#umbrales-operativos-latencia-throughput-y-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umbrales operativos: latencia, throughput y errores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-observabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Observabilidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ventanas-watermark-y-semantica-de-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ventanas, watermark y semántica de entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-escalado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Escalado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-costos-y-portabilidad-cloud-agnostic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Costos y portabilidad (cloud-agnostic)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ingesta-con-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Ingesta con Kafka
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-alertas-y-umbrales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Alertas y umbrales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Alertas y umbrales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alertas-de-negocio-implementadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alertas de negocio (implementadas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#umbrales-operativos-latencia-throughput-y-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Umbrales operativos: latencia, throughput y errores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-observabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Observabilidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ventanas-watermark-y-semantica-de-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ventanas, watermark y semántica de entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-escalado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Escalado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-costos-y-portabilidad-cloud-agnostic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Costos y portabilidad (cloud-agnostic)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="operacion-ingesta-alertas-observabilidad-escalado-y-costos">Operación: ingesta, alertas, observabilidad, escalado y costos</h1>
+<p>Esta página reúne las decisiones operativas del pipeline de la Unidad 2 (aire y clima). Lo que ya está implementado se indica como tal; lo que es una propuesta de mejora se marca como <strong>propuesta</strong>.</p>
+<h2 id="1-ingesta-con-kafka">1. Ingesta con Kafka</h2>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Decisión implementada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Topics</td>
+<td><code>atmos-aire</code> y <code>atmos-clima</code> (datos), <code>atmos-negocio</code> (eventos <code>aire.episodio</code> y <code>clima.helada</code>)</td>
+</tr>
+<tr>
+<td>Productor</td>
+<td>Script Python (<code>kafka-python</code>) que lee Open-Meteo y publica un evento JSON por hora</td>
+</tr>
+<tr>
+<td>Clave del mensaje</td>
+<td><code>sensorId</code>, para mantener el orden de una misma fuente</td>
+</tr>
+<tr>
+<td>Confirmación</td>
+<td><code>acks="all"</code>: el productor espera la confirmación del broker antes de dar el envío por bueno</td>
+</tr>
+<tr>
+<td>Contrato</td>
+<td>JSON con marca de tiempo del evento, valores medidos y campo <code>origen</code> (p. ej. <code>demo-tardio</code> para probar el watermark)</td>
+</tr>
+<tr>
+<td>Consumidor</td>
+<td>Spark Structured Streaming (<code>subscribe</code>), <code>startingOffsets</code> configurable y <code>failOnDataLoss=false</code></td>
+</tr>
+<tr>
+<td>Particiones</td>
+<td>1 partición, factor de replicación 1 (un solo broker en Docker)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Patrón de ingesta:</strong> productor único por fuente → topic → un consumidor Spark con dos consultas (ventanas y inferencia) que comparten el mismo flujo.</p>
+<h2 id="2-alertas-y-umbrales">2. Alertas y umbrales</h2>
+<h3 id="alertas-de-negocio-implementadas">Alertas de negocio (implementadas)</h3>
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Regla</th>
+<th>Umbral</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aire.episodio</code></td>
+<td>PM2.5 por encima del percentil 95 del histórico de entrenamiento</td>
+<td>p95 relativo (se guarda con el modelo)</td>
+</tr>
+<tr>
+<td><code>clima.helada</code></td>
+<td>Temperatura por debajo del umbral configurable</td>
+<td><code>--umbral-helada</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="umbrales-operativos-latencia-throughput-y-errores">Umbrales operativos: latencia, throughput y errores</h3>
+<table>
+<thead>
+<tr>
+<th>Dimensión operativa</th>
+<th>Métrica en Grafana</th>
+<th>Umbral</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Latencia / frescura</td>
+<td>«Segundos desde el último push» (<code>time() - push_time_seconds</code>)</td>
+<td>Verde &lt; 120 s · naranja ≥ 120 s · rojo ≥ 600 s (implementado en el tablero)</td>
+</tr>
+<tr>
+<td>Throughput</td>
+<td>«Eventos procesados» (<code>lambda26_*_eventos_total</code>)</td>
+<td>Esperado: 1 evento por hora y por dimensión. Si el contador no crece durante más de 2 horas, la fuente o el productor están caídos (<strong>propuesta</strong>)</td>
+</tr>
+<tr>
+<td>Errores</td>
+<td>«Filas descartadas por watermark» y estado de la consulta</td>
+<td>Cualquier valor mayor que 0 se revisa; el valor sube a propósito con el evento <code>demo-tardio</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Propuesta (no desplegada):</strong> regla de Prometheus para avisar cuando el pipeline se detiene.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">groups</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ecodata</span>
+<span class="w">    </span><span class="nt">rules</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alert</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PipelineSinDatos</span>
+<span class="w">        </span><span class="nt">expr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">time() - push_time_seconds{job=~"lambda26_(aire|clima)",instance="inferencia"} &gt; 600</span>
+<span class="w">        </span><span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2m</span>
+<span class="w">        </span><span class="nt">labels</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="nv">critical</span><span class="p p-Indicator">}</span>
+<span class="w">        </span><span class="nt">annotations</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="s">"El</span><span class="nv"> </span><span class="s">pipeline</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.job</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">lleva</span><span class="nv"> </span><span class="s">más</span><span class="nv"> </span><span class="s">de</span><span class="nv"> </span><span class="s">10</span><span class="nv"> </span><span class="s">minutos</span><span class="nv"> </span><span class="s">sin</span><span class="nv"> </span><span class="s">publicar</span><span class="nv"> </span><span class="s">métricas"</span><span class="p p-Indicator">}</span>
+</code></pre></div>
+<h2 id="3-observabilidad">3. Observabilidad</h2>
+<ul>
+<li><strong>Métricas:</strong> cada consulta de Spark publica sus indicadores en Pushgateway con el prefijo <code>lambda26_</code> (eventos, MAE del modelo y de la persistencia, episodios, filas descartadas, estado y marca del watermark). Prometheus los recoge y Grafana los muestra en un solo tablero con las secciones de aire y clima.</li>
+<li><strong>Progreso de la consulta:</strong> un <code>StreamingQueryListener</code> lee el avance de cada lote (<code>numRowsDroppedByWatermark</code>, filas en estado, watermark) y lo envía como métrica.</li>
+<li><strong>Logs:</strong> Spark en nivel <code>WARN</code> y mensajes de cada script por consola. Los logs en formato JSON con campos fijos (nivel, componente, id de lote) son una <strong>mejora pendiente</strong>; por ahora la información estructurada viaja en las métricas.</li>
+<li><strong>Kafka:</strong> inspección de topics y mensajes con Kafka UI.</li>
+</ul>
+<h2 id="4-ventanas-watermark-y-semantica-de-entrega">4. Ventanas, watermark y semántica de entrega</h2>
+<ul>
+<li><strong>Ventana fija de 6 h</strong> con <strong>watermark de 2 h</strong>, salida en modo <code>append</code>: la ventana se emite cuando el watermark la cierra, y los eventos que llegan más tarde se descartan y se cuentan en Grafana.</li>
+<li><strong>Checkpoint</strong> propio por consulta (<code>_ckpt/ventanas</code> y <code>_ckpt/inferencia</code>): si el job se reinicia, retoma desde el último lote confirmado.</li>
+<li><strong>Idempotencia por lote:</strong> la consulta de inferencia ignora un lote cuyo identificador ya procesó, de modo que un reintento no duplica métricas ni eventos.</li>
+<li><strong>Semántica:</strong> el productor usa <code>acks="all"</code> y Spark usa checkpoint, lo que da entrega <strong>al menos una vez</strong> con protección contra duplicados por lote. <strong>No se garantiza exactly-once de punta a punta</strong>, y así consta en el alcance del brief.</li>
+</ul>
+<h2 id="5-escalado">5. Escalado</h2>
+<p>El volumen actual es mínimo (un evento por hora y dimensión, menos de 1 KB cada uno), por lo que una sola partición y un solo broker son suficientes. Ruta de crecimiento:</p>
+<table>
+<thead>
+<tr>
+<th>Si crece…</th>
+<th>Qué se cambia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Número de estaciones o ubicaciones</td>
+<td>Más particiones por topic usando la estación como clave, y un consumidor Spark con más executors</td>
+</tr>
+<tr>
+<td>Disponibilidad</td>
+<td>Kafka con 3 brokers y factor de replicación 3</td>
+</tr>
+<tr>
+<td>Estado de Spark</td>
+<td>Checkpoint en almacenamiento compartido (objeto o HDFS) y <code>spark.sql.shuffle.partitions</code> acorde al número de núcleos</td>
+</tr>
+<tr>
+<td>Frecuencia de eventos</td>
+<td>Reducir el <code>trigger</code> (hoy 5 s) y vigilar el retraso de consumo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-costos-y-portabilidad-cloud-agnostic">6. Costos y portabilidad (cloud-agnostic)</h2>
+<p><strong>Decisión: componentes de código abierto en contenedores.</strong> Kafka, Spark, Prometheus, Pushgateway y Grafana corren en Docker Compose y se pueden llevar sin cambios a cualquier proveedor (máquinas virtuales, Kubernetes o servicios gestionados con API compatible con Kafka). No se usa ningún servicio propietario de un proveedor.</p>
+<table>
+<thead>
+<tr>
+<th>Escenario</th>
+<th>Costo mensual aproximado</th>
+<th>Comentario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entorno actual (laptop, Docker)</td>
+<td>US$ 0</td>
+<td>Open-Meteo es gratuita para uso no comercial</td>
+</tr>
+<tr>
+<td>Referencia de la plantilla del curso: 3 × t3.medium</td>
+<td>US$ 91,15</td>
+<td>Margen para separar Kafka, Spark y observabilidad</td>
+</tr>
+<tr>
+<td>Alternativa ajustada al volumen: 1 × t3.medium</td>
+<td>≈ US$ 30,4</td>
+<td>Un tercio de la referencia (91,15 ÷ 3); alcanza para el volumen actual</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Justificación:</strong> con 48 eventos al día, un clúster de tres nodos o un servicio gestionado de Kafka y Spark estaría sobredimensionado. Se recomienda empezar con una sola máquina y escalar por partes, según la tabla anterior, cuando aumente el número de estaciones. Las cifras son de referencia (precios bajo demanda); deben verificarse en la calculadora del proveedor antes de contratar.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>
