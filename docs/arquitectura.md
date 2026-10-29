@@ -11,7 +11,7 @@ El proyecto requiere dos capacidades simultáneas:
 
 Lambda permite mantener ambas rutas separadas, alimentadas por la misma fuente (Open-Meteo).
 
-![Arquitectura Lambda](../diagrams/diagrama.png)
+   ![Arquitectura Lambda](diagrama.png)
 
 ## Componentes de la ruta Batch (Unidad 1)
 - Extracción desde Open-Meteo
