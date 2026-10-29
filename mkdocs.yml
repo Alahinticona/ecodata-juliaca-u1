@@ -11,23 +11,22 @@ theme:
     primary: indigo
     accent: light blue
   features:
-    - navigation.tabs
-    - navigation.sections
-    - toc.integrate
+    - navigation.top
     - content.code.copy
 
 nav:
   - Inicio: index.md
-  - Brief: brief.md
-  - Arquitectura: arquitectura.md
-  - Dimensión Clima (Alahin): dimension-alahin.md
-  - Dimensión Aire (Lanzeloth): dimension-lanzeloth.md
-  - Producto U1: u1-producto.md
-  - Resultados: resultados.md
-  - Unidad 2:
-      - Resumen: u2/index.md
-      - Aire: u2/dimension-aire.md
-      - Clima: u2/dimension-clima.md
+  - Brief técnico-analítico: brief.md
+  - Producto Unidad 1:
+      - Producto U1: u1-producto.md
+      - Arquitectura: arquitectura.md
+      - Dimensión Clima (Alahin): dimension-alahin.md
+      - Dimensión Aire (Lanzeloth): dimension-lanzeloth.md
+      - Resultados: resultados.md
+  - Producto Unidad 2:
+      - Producto U2 (resumen): u2/index.md
+      - Dimensión Aire (Lanzeloth): u2/dimension-aire.md
+      - Dimensión Clima (Alahin): u2/dimension-clima.md
 
 markdown_extensions:
   - tables
