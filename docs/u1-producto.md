@@ -33,9 +33,11 @@ Open-Meteo → Limpieza + Calidad → Parquet particionado (Gold) → Spark MLli
 - Variable más importante: hour (0.636)
 
 ### Dimensión Aire (Lanzeloth)
-- Registros: (completar)
-- Mejor modelo: (completar)
-- Métricas: (completar)
+- Registros: 2 328 por hora (2 324 limpios), del 28/05/2026 al 01/09/2026
+- Objetivo: PM2.5 a +1 h
+- Mejor modelo: regresión lineal (Spark MLlib)
+- Métricas en prueba: RMSE 1,891 | R² 0,891 | MAE 1,321 (persistencia: RMSE 1,944 | MAE 1,065)
+- Riesgo: 99,3 % Bajo, 4 horas Moderado, 12 horas Alto
 
 ## 6. Conclusión
 Se completó el pipeline batch de la Unidad 1 con dos dimensiones complementarias. La base está lista para incorporar streaming e inferencia en tiempo real en la Unidad 2.

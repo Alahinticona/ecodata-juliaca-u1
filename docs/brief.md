@@ -8,7 +8,7 @@ Hito S2 del cronograma. Fija qué sistema Big Data construye el equipo durante e
 - **Sección:** [completar]
 - **Repositorio (URL):** [https://github.com/Alahinticona/ecodata-juliaca-u1](https://github.com/Alahinticona/ecodata-juliaca-u1)
 - **Documentación publicada:** [https://alahinticona.github.io/ecodata-juliaca-u1/](https://alahinticona.github.io/ecodata-juliaca-u1/)
-- **Topics del repositorio configurados:** sí. `big-data`, `juliaca`, `lambda-architecture`, `open-meteo`, `pyspark`, `spark-mllib`, y para U2 `kafka`, `spark-streaming`, `grafana`, `prometheus`, `streaming`. Falta el topic con el formato `grupo-<numero>-ecodata`: [completar el número de grupo].
+- **Topics del repositorio:** a configurar por el propietario del repositorio: `big-data`, `juliaca`, `lambda-architecture`, `open-meteo`, `pyspark`, `spark-mllib`, y para U2 `kafka`, `spark-streaming`, `grafana`, `prometheus`, `streaming`. Falta el topic con el formato `grupo-<numero>-ecodata`: [completar el número de grupo].
 
 **Integrantes:**
 
@@ -78,12 +78,12 @@ Los paneles de las dos dimensiones U2 se muestran en el mismo Grafana (`S12 - Ec
 
 - **Tipo:** predictiva sin tiempo real (U1, batch).
 - **Dimensión:** ¿cómo ha sido la concentración de PM2.5 y PM10 en Juliaca y qué riesgo se puede esperar? Aporta el nivel de contaminación del aire a la pregunta central.
-- **Indicadores:** concentración media de PM2.5 y PM10 por periodo; riesgo estimado por el modelo de U1 [completar el modelo y su métrica].
+- **Indicadores:** concentración media de PM2.5 y PM10 por periodo; PM2.5 pronosticado a +1 h con regresión lineal de Spark MLlib (RMSE 1,891 y R² 0,891 sobre 464 horas de prueba; persistencia: RMSE 1,944).
 - **Decisión o acción que habilita:** identificar los periodos de aire más cargado y orientar las recomendaciones a la población.
 - **Instrumento batch:** `juliaca_calidad_aire.csv` (Open-Meteo, modelo CAMS, por hora; PM2.5 y PM10), guardado como Parquet particionado.
 - **Instrumento streaming:** no aplica en vivo; es el mismo origen de U2, acumulado.
-- **Modelo predictivo:** modelo de riesgo de calidad del aire [completar tipo, p. ej. clasificación o regresión], entrenado una sola vez.
-- **Salida:** notebook `03_modelo_riesgo.ipynb` con tablas, gráficos y la predicción.
+- **Modelo predictivo:** regresión de PM2.5 a +1 h con Spark MLlib (se compararon regresión lineal, RandomForest y GBT frente a la persistencia), entrenada una sola vez; el nivel de riesgo (Bajo, Moderado, Alto) se deriva de los umbrales 25 y 50 µg/m³.
+- **Salida:** script `s12/entrena_aire_u1.py` y métricas en `s12/aire_u1_metricas.json`, con la documentación en la página «Dimensión Aire (Lanzeloth)».
 - **Se combina con:** la dimensión de aire en vivo y la dimensión de clima en el tablero final.
 - **Requisitos iniciales:** 1) el sistema debe limpiar la calidad del aire y guardarla en Parquet; 2) el sistema debe entrenar y evaluar un modelo de riesgo; 3) el sistema debe reportar sus métricas en el notebook.
 

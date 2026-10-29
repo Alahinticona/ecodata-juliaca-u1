@@ -12,7 +12,12 @@
 - Modelo guardado en `/opt/ecodata/models/clima_rf_model`
 
 ## Dimensión Aire (Lanzeloth)
-- (Completar con resultados reales del compañero)
+- 2 328 registros por hora (28/05/2026 a 01/09/2026); 2 324 tras la limpieza; 0 duplicados
+- Regresión lineal (mejor): RMSE 1,891 | R² 0,891 | MAE 1,321
+- Persistencia (base): RMSE 1,944 | R² 0,885 | MAE 1,065
+- RandomForest: RMSE 3,676 | GBT: RMSE 3,901 (peor ajuste ante los picos de agosto)
+- Riesgo de PM2.5: Bajo 2 308 h, Moderado 4 h, Alto 12 h
+- Datos en `Ecodata/artifacts/juliaca_aire_particionado` (Parquet por año y mes)
 
 ## Evidencias disponibles
 - Notebooks reproducibles
