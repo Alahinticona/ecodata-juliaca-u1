@@ -1,6 +1,9 @@
-site_name: EcoData – Unidad 1
-site_description: Sistema de Alerta Temprana de Calidad del Aire – Juliaca
+site_name: EcoData - Unidad 1 y 2
+site_description: Sistema de Alerta Temprana de Calidad del Aire y Clima - Juliaca
 site_author: Equipo EcoData
+site_url: https://alahinticona.github.io/ecodata-juliaca-u1/
+repo_url: https://github.com/Alahinticona/ecodata-juliaca-u1
+repo_name: Alahinticona/ecodata-juliaca-u1
 
 theme:
   name: material
@@ -20,6 +23,11 @@ nav:
   - Dimensión Aire (Lanzeloth): dimension-lanzeloth.md
   - Producto U1: u1-producto.md
   - Resultados: resultados.md
+  - Unidad 2:
+      - Resumen: u2/index.md
+      - Brief: u2/brief.md
+      - Aire: u2/dimension-aire.md
+      - Clima: u2/dimension-clima.md
 
 markdown_extensions:
   - tables
