@@ -1,0 +1,47 @@
+{
+  "registros_crudos": 2328,
+  "registros_limpios": 2324,
+  "nulos": {
+    "time": 0,
+    "pm10": 0,
+    "pm2_5": 0,
+    "eaqi": 0,
+    "usaqi": 0
+  },
+  "duplicados": 0,
+  "periodo": [
+    "2026-05-28 00:00:00",
+    "2026-09-01 23:00:00"
+  ],
+  "riesgo": {
+    "Moderado": 4,
+    "Alto": 12,
+    "Bajo": 2308
+  },
+  "train": 1856,
+  "test": 464,
+  "metricas": {
+    "Persistencia (base)": {
+      "rmse": 1.9436623358654839,
+      "mae": 1.0648706896551718,
+      "r2": 0.8850157349562113
+    },
+    "LinearRegression": {
+      "rmse": 1.8914420721253788,
+      "mae": 1.320544427962346,
+      "r2": 0.8911112867850468
+    },
+    "RandomForest": {
+      "rmse": 3.6760681648861,
+      "mae": 1.7153955081870096,
+      "r2": 0.5886950963166996
+    },
+    "GBT": {
+      "rmse": 3.900679738669085,
+      "mae": 1.7065492797542254,
+      "r2": 0.5368972450928902
+    }
+  },
+  "mejor_modelo": "LinearRegression",
+  "importancias": null
+}
