@@ -28,6 +28,12 @@ nav:
       - Dimensión Aire (Lanzeloth): u2/dimension-aire.md
       - Dimensión Clima (Alahin): u2/dimension-clima.md
       - Operación, escalado y costos: u2/operacion.md
+      - Contrato de eventos: u2/contrato-eventos.md
+      - Observabilidad y alertas: u2/observabilidad-alertas.md
+      - Preparación S12: u2/s12-preparacion.md
+      - Guion de la demo: u2/demo.md
+      - Evidencias: u2/evidencias.md
+      - Limitaciones y mejoras: u2/limitaciones.md
 
 markdown_extensions:
   - tables

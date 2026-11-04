@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ecodata/atmos-aire-v1",
+  "title": "Lectura horaria de calidad del aire (Open-Meteo CAMS, Juliaca)",
+  "type": "object",
+  "required": ["tipoEvento", "sensorId", "pm25", "pm10", "origen", "timestamp"],
+  "additionalProperties": false,
+  "properties": {
+    "tipoEvento": {"const": "aire.lectura"},
+    "sensorId": {"type": "string", "examples": ["openmeteo-cams-juliaca"]},
+    "pm25": {"type": "number", "minimum": 0, "description": "µg/m³"},
+    "pm10": {"type": "number", "minimum": 0, "description": "µg/m³"},
+    "origen": {"enum": ["openmeteo-cams", "openmeteo-replay", "demo-tardio"]},
+    "timestamp": {"type": "integer", "description": "hora del dato, epoch en milisegundos (UTC)"}
+  }
+}

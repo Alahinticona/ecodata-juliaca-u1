@@ -1,0 +1,4 @@
+# AGREGA estas líneas a obs/prometheus/prometheus.yml (arriba de scrape_configs, a nivel raíz)
+# y deja intacto el job pushgateway que ya agregaste.
+rule_files:
+  - /etc/prometheus/alerts.yml

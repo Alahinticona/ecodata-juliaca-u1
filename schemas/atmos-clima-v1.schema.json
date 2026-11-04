@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ecodata/atmos-clima-v1",
+  "title": "Lectura horaria de clima (Open-Meteo, Juliaca)",
+  "type": "object",
+  "required": ["tipoEvento", "sensorId", "temp", "hum", "viento", "origen", "timestamp"],
+  "additionalProperties": false,
+  "properties": {
+    "tipoEvento": {"const": "clima.lectura"},
+    "sensorId": {"type": "string"},
+    "temp": {"type": "number", "minimum": -60, "maximum": 60, "description": "°C a 2 m"},
+    "hum": {"type": "number", "minimum": 0, "maximum": 100, "description": "% humedad relativa"},
+    "viento": {"type": "number", "minimum": 0, "description": "velocidad a 10 m"},
+    "origen": {"type": "string"},
+    "timestamp": {"type": "integer", "description": "epoch en milisegundos (UTC)"}
+  }
+}
