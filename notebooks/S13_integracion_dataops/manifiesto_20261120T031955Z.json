@@ -1,0 +1,950 @@
+{
+  "runId": "20261120T031955Z",
+  "proyecto": "EcoData-Juliaca",
+  "sparkVersion": "4.2.0",
+  "python": "3.10.21",
+  "compuertas": {
+    "Modelo temperatura existe": true,
+    "Modelo PM25 existe": true,
+    "JSON clima existe": true,
+    "Pushgateway listo": true,
+    "Prometheus listo": true,
+    "Grafana saludable": true,
+    "Kafka topic atmos-clima con datos": true
+  },
+  "batch": {
+    "filas": 500,
+    "ratioValidos": 1.0,
+    "latenciaPromedioMs": 355840.108,
+    "latenciaP50Ms": 17874.0,
+    "latenciaP95Ms": 1391724.0,
+    "latenciaMaxMs": 1497160.0,
+    "fraccionMayor1Min": 0.45,
+    "calidad": {
+      "Hay filas": true,
+      "isValid sin nulos": true,
+      "latencyMs sin nulos": true,
+      "ratioValidos en [0, 1]": true,
+      "Latencia tipica (p50) menor a 60 s": true
+    },
+    "advertencias": [
+      "p95 de latencia > 5 min: el promedio no representa a la mayoria"
+    ],
+    "nota": "Distribucion bimodal ilustrativa para demostrar p50/p95 (hallazgo tipo S13)"
+  },
+  "streaming": {
+    "duracionS": 45,
+    "filas": 223,
+    "microlotes": [
+      {
+        "batchId": 0,
+        "filas": 0
+      },
+      {
+        "batchId": 1,
+        "filas": 1
+      },
+      {
+        "batchId": 2,
+        "filas": 2
+      },
+      {
+        "batchId": 3,
+        "filas": 1
+      },
+      {
+        "batchId": 4,
+        "filas": 1
+      },
+      {
+        "batchId": 5,
+        "filas": 1
+      },
+      {
+        "batchId": 6,
+        "filas": 1
+      },
+      {
+        "batchId": 7,
+        "filas": 1
+      },
+      {
+        "batchId": 8,
+        "filas": 1
+      },
+      {
+        "batchId": 9,
+        "filas": 1
+      },
+      {
+        "batchId": 10,
+        "filas": 1
+      },
+      {
+        "batchId": 11,
+        "filas": 1
+      },
+      {
+        "batchId": 12,
+        "filas": 1
+      },
+      {
+        "batchId": 13,
+        "filas": 1
+      },
+      {
+        "batchId": 14,
+        "filas": 1
+      },
+      {
+        "batchId": 15,
+        "filas": 1
+      },
+      {
+        "batchId": 16,
+        "filas": 1
+      },
+      {
+        "batchId": 17,
+        "filas": 1
+      },
+      {
+        "batchId": 18,
+        "filas": 1
+      },
+      {
+        "batchId": 19,
+        "filas": 1
+      },
+      {
+        "batchId": 20,
+        "filas": 1
+      },
+      {
+        "batchId": 21,
+        "filas": 1
+      },
+      {
+        "batchId": 22,
+        "filas": 1
+      },
+      {
+        "batchId": 23,
+        "filas": 1
+      },
+      {
+        "batchId": 24,
+        "filas": 1
+      },
+      {
+        "batchId": 25,
+        "filas": 1
+      },
+      {
+        "batchId": 26,
+        "filas": 1
+      },
+      {
+        "batchId": 27,
+        "filas": 1
+      },
+      {
+        "batchId": 28,
+        "filas": 1
+      },
+      {
+        "batchId": 29,
+        "filas": 1
+      },
+      {
+        "batchId": 30,
+        "filas": 1
+      },
+      {
+        "batchId": 31,
+        "filas": 1
+      },
+      {
+        "batchId": 32,
+        "filas": 1
+      },
+      {
+        "batchId": 33,
+        "filas": 1
+      },
+      {
+        "batchId": 34,
+        "filas": 1
+      },
+      {
+        "batchId": 35,
+        "filas": 1
+      },
+      {
+        "batchId": 36,
+        "filas": 1
+      },
+      {
+        "batchId": 37,
+        "filas": 1
+      },
+      {
+        "batchId": 38,
+        "filas": 1
+      },
+      {
+        "batchId": 39,
+        "filas": 1
+      },
+      {
+        "batchId": 40,
+        "filas": 1
+      },
+      {
+        "batchId": 41,
+        "filas": 1
+      },
+      {
+        "batchId": 42,
+        "filas": 1
+      },
+      {
+        "batchId": 43,
+        "filas": 1
+      },
+      {
+        "batchId": 44,
+        "filas": 1
+      },
+      {
+        "batchId": 45,
+        "filas": 1
+      },
+      {
+        "batchId": 46,
+        "filas": 1
+      },
+      {
+        "batchId": 47,
+        "filas": 1
+      },
+      {
+        "batchId": 48,
+        "filas": 1
+      },
+      {
+        "batchId": 49,
+        "filas": 1
+      },
+      {
+        "batchId": 50,
+        "filas": 1
+      },
+      {
+        "batchId": 51,
+        "filas": 1
+      },
+      {
+        "batchId": 52,
+        "filas": 1
+      },
+      {
+        "batchId": 53,
+        "filas": 1
+      },
+      {
+        "batchId": 54,
+        "filas": 1
+      },
+      {
+        "batchId": 55,
+        "filas": 1
+      },
+      {
+        "batchId": 56,
+        "filas": 1
+      },
+      {
+        "batchId": 57,
+        "filas": 1
+      },
+      {
+        "batchId": 58,
+        "filas": 1
+      },
+      {
+        "batchId": 59,
+        "filas": 1
+      },
+      {
+        "batchId": 60,
+        "filas": 1
+      },
+      {
+        "batchId": 61,
+        "filas": 1
+      },
+      {
+        "batchId": 62,
+        "filas": 1
+      },
+      {
+        "batchId": 63,
+        "filas": 1
+      },
+      {
+        "batchId": 64,
+        "filas": 1
+      },
+      {
+        "batchId": 65,
+        "filas": 1
+      },
+      {
+        "batchId": 66,
+        "filas": 1
+      },
+      {
+        "batchId": 67,
+        "filas": 1
+      },
+      {
+        "batchId": 68,
+        "filas": 1
+      },
+      {
+        "batchId": 69,
+        "filas": 1
+      },
+      {
+        "batchId": 70,
+        "filas": 1
+      },
+      {
+        "batchId": 71,
+        "filas": 1
+      },
+      {
+        "batchId": 72,
+        "filas": 1
+      },
+      {
+        "batchId": 73,
+        "filas": 1
+      },
+      {
+        "batchId": 74,
+        "filas": 1
+      },
+      {
+        "batchId": 75,
+        "filas": 1
+      },
+      {
+        "batchId": 76,
+        "filas": 1
+      },
+      {
+        "batchId": 77,
+        "filas": 1
+      },
+      {
+        "batchId": 78,
+        "filas": 1
+      },
+      {
+        "batchId": 79,
+        "filas": 1
+      },
+      {
+        "batchId": 80,
+        "filas": 1
+      },
+      {
+        "batchId": 81,
+        "filas": 1
+      },
+      {
+        "batchId": 82,
+        "filas": 1
+      },
+      {
+        "batchId": 83,
+        "filas": 1
+      },
+      {
+        "batchId": 84,
+        "filas": 1
+      },
+      {
+        "batchId": 85,
+        "filas": 1
+      },
+      {
+        "batchId": 86,
+        "filas": 1
+      },
+      {
+        "batchId": 87,
+        "filas": 1
+      },
+      {
+        "batchId": 88,
+        "filas": 1
+      },
+      {
+        "batchId": 89,
+        "filas": 1
+      },
+      {
+        "batchId": 90,
+        "filas": 1
+      },
+      {
+        "batchId": 91,
+        "filas": 1
+      },
+      {
+        "batchId": 92,
+        "filas": 1
+      },
+      {
+        "batchId": 93,
+        "filas": 1
+      },
+      {
+        "batchId": 94,
+        "filas": 1
+      },
+      {
+        "batchId": 95,
+        "filas": 1
+      },
+      {
+        "batchId": 96,
+        "filas": 1
+      },
+      {
+        "batchId": 97,
+        "filas": 1
+      },
+      {
+        "batchId": 98,
+        "filas": 1
+      },
+      {
+        "batchId": 99,
+        "filas": 1
+      },
+      {
+        "batchId": 100,
+        "filas": 1
+      },
+      {
+        "batchId": 101,
+        "filas": 1
+      },
+      {
+        "batchId": 102,
+        "filas": 1
+      },
+      {
+        "batchId": 103,
+        "filas": 1
+      },
+      {
+        "batchId": 104,
+        "filas": 1
+      },
+      {
+        "batchId": 105,
+        "filas": 1
+      },
+      {
+        "batchId": 106,
+        "filas": 1
+      },
+      {
+        "batchId": 107,
+        "filas": 1
+      },
+      {
+        "batchId": 108,
+        "filas": 1
+      },
+      {
+        "batchId": 109,
+        "filas": 1
+      },
+      {
+        "batchId": 110,
+        "filas": 1
+      },
+      {
+        "batchId": 111,
+        "filas": 1
+      },
+      {
+        "batchId": 112,
+        "filas": 1
+      },
+      {
+        "batchId": 113,
+        "filas": 1
+      },
+      {
+        "batchId": 114,
+        "filas": 1
+      },
+      {
+        "batchId": 115,
+        "filas": 1
+      },
+      {
+        "batchId": 116,
+        "filas": 1
+      },
+      {
+        "batchId": 117,
+        "filas": 1
+      },
+      {
+        "batchId": 118,
+        "filas": 1
+      },
+      {
+        "batchId": 119,
+        "filas": 1
+      },
+      {
+        "batchId": 120,
+        "filas": 1
+      },
+      {
+        "batchId": 121,
+        "filas": 1
+      },
+      {
+        "batchId": 122,
+        "filas": 1
+      },
+      {
+        "batchId": 123,
+        "filas": 1
+      },
+      {
+        "batchId": 124,
+        "filas": 1
+      },
+      {
+        "batchId": 125,
+        "filas": 1
+      },
+      {
+        "batchId": 126,
+        "filas": 1
+      },
+      {
+        "batchId": 127,
+        "filas": 1
+      },
+      {
+        "batchId": 128,
+        "filas": 1
+      },
+      {
+        "batchId": 129,
+        "filas": 1
+      },
+      {
+        "batchId": 130,
+        "filas": 1
+      },
+      {
+        "batchId": 131,
+        "filas": 1
+      },
+      {
+        "batchId": 132,
+        "filas": 1
+      },
+      {
+        "batchId": 133,
+        "filas": 1
+      },
+      {
+        "batchId": 134,
+        "filas": 1
+      },
+      {
+        "batchId": 135,
+        "filas": 1
+      },
+      {
+        "batchId": 136,
+        "filas": 1
+      },
+      {
+        "batchId": 137,
+        "filas": 1
+      },
+      {
+        "batchId": 138,
+        "filas": 1
+      },
+      {
+        "batchId": 139,
+        "filas": 1
+      },
+      {
+        "batchId": 140,
+        "filas": 1
+      },
+      {
+        "batchId": 141,
+        "filas": 1
+      },
+      {
+        "batchId": 142,
+        "filas": 1
+      },
+      {
+        "batchId": 143,
+        "filas": 1
+      },
+      {
+        "batchId": 144,
+        "filas": 1
+      },
+      {
+        "batchId": 145,
+        "filas": 1
+      },
+      {
+        "batchId": 146,
+        "filas": 1
+      },
+      {
+        "batchId": 147,
+        "filas": 1
+      },
+      {
+        "batchId": 148,
+        "filas": 1
+      },
+      {
+        "batchId": 149,
+        "filas": 1
+      },
+      {
+        "batchId": 150,
+        "filas": 1
+      },
+      {
+        "batchId": 151,
+        "filas": 1
+      },
+      {
+        "batchId": 152,
+        "filas": 1
+      },
+      {
+        "batchId": 153,
+        "filas": 1
+      },
+      {
+        "batchId": 154,
+        "filas": 1
+      },
+      {
+        "batchId": 155,
+        "filas": 1
+      },
+      {
+        "batchId": 156,
+        "filas": 1
+      },
+      {
+        "batchId": 157,
+        "filas": 1
+      },
+      {
+        "batchId": 158,
+        "filas": 1
+      },
+      {
+        "batchId": 159,
+        "filas": 1
+      },
+      {
+        "batchId": 160,
+        "filas": 1
+      },
+      {
+        "batchId": 161,
+        "filas": 1
+      },
+      {
+        "batchId": 162,
+        "filas": 1
+      },
+      {
+        "batchId": 163,
+        "filas": 1
+      },
+      {
+        "batchId": 164,
+        "filas": 1
+      },
+      {
+        "batchId": 165,
+        "filas": 1
+      },
+      {
+        "batchId": 166,
+        "filas": 1
+      },
+      {
+        "batchId": 167,
+        "filas": 1
+      },
+      {
+        "batchId": 168,
+        "filas": 1
+      },
+      {
+        "batchId": 169,
+        "filas": 1
+      },
+      {
+        "batchId": 170,
+        "filas": 1
+      },
+      {
+        "batchId": 171,
+        "filas": 1
+      },
+      {
+        "batchId": 172,
+        "filas": 1
+      },
+      {
+        "batchId": 173,
+        "filas": 1
+      },
+      {
+        "batchId": 174,
+        "filas": 1
+      },
+      {
+        "batchId": 175,
+        "filas": 1
+      },
+      {
+        "batchId": 176,
+        "filas": 1
+      },
+      {
+        "batchId": 177,
+        "filas": 1
+      },
+      {
+        "batchId": 178,
+        "filas": 1
+      },
+      {
+        "batchId": 179,
+        "filas": 1
+      },
+      {
+        "batchId": 180,
+        "filas": 1
+      },
+      {
+        "batchId": 181,
+        "filas": 1
+      },
+      {
+        "batchId": 182,
+        "filas": 1
+      },
+      {
+        "batchId": 183,
+        "filas": 1
+      },
+      {
+        "batchId": 184,
+        "filas": 1
+      },
+      {
+        "batchId": 185,
+        "filas": 1
+      },
+      {
+        "batchId": 186,
+        "filas": 1
+      },
+      {
+        "batchId": 187,
+        "filas": 1
+      },
+      {
+        "batchId": 188,
+        "filas": 1
+      },
+      {
+        "batchId": 189,
+        "filas": 1
+      },
+      {
+        "batchId": 190,
+        "filas": 1
+      },
+      {
+        "batchId": 191,
+        "filas": 1
+      },
+      {
+        "batchId": 192,
+        "filas": 1
+      },
+      {
+        "batchId": 193,
+        "filas": 1
+      },
+      {
+        "batchId": 194,
+        "filas": 1
+      },
+      {
+        "batchId": 195,
+        "filas": 1
+      },
+      {
+        "batchId": 196,
+        "filas": 1
+      },
+      {
+        "batchId": 197,
+        "filas": 1
+      },
+      {
+        "batchId": 198,
+        "filas": 1
+      },
+      {
+        "batchId": 199,
+        "filas": 1
+      },
+      {
+        "batchId": 200,
+        "filas": 1
+      },
+      {
+        "batchId": 201,
+        "filas": 1
+      },
+      {
+        "batchId": 202,
+        "filas": 1
+      },
+      {
+        "batchId": 203,
+        "filas": 1
+      },
+      {
+        "batchId": 204,
+        "filas": 1
+      },
+      {
+        "batchId": 205,
+        "filas": 1
+      },
+      {
+        "batchId": 206,
+        "filas": 1
+      },
+      {
+        "batchId": 207,
+        "filas": 1
+      },
+      {
+        "batchId": 208,
+        "filas": 1
+      },
+      {
+        "batchId": 209,
+        "filas": 1
+      },
+      {
+        "batchId": 210,
+        "filas": 1
+      },
+      {
+        "batchId": 211,
+        "filas": 1
+      },
+      {
+        "batchId": 212,
+        "filas": 1
+      },
+      {
+        "batchId": 213,
+        "filas": 1
+      },
+      {
+        "batchId": 214,
+        "filas": 1
+      },
+      {
+        "batchId": 215,
+        "filas": 1
+      },
+      {
+        "batchId": 216,
+        "filas": 1
+      },
+      {
+        "batchId": 217,
+        "filas": 1
+      },
+      {
+        "batchId": 218,
+        "filas": 1
+      },
+      {
+        "batchId": 219,
+        "filas": 1
+      },
+      {
+        "batchId": 220,
+        "filas": 1
+      },
+      {
+        "batchId": 221,
+        "filas": 1
+      },
+      {
+        "batchId": 222,
+        "filas": 1
+      }
+    ],
+    "paresComparables": 222,
+    "maeVentana": 0.8792792792792794,
+    "topic": "atmos-clima"
+  },
+  "observabilidad": {
+    "metricas": {
+      "lambda26_ecodata_batch_eventos_total": "500",
+      "lambda26_ecodata_batch_validos_ratio": "1",
+      "lambda26_ecodata_batch_latencia_p50_ms": "17874",
+      "lambda26_ecodata_batch_latencia_p95_ms": "1391724",
+      "lambda26_ecodata_stream_filas_total": "223",
+      "lambda26_ecodata_stream_mae": "0.8792792792792794",
+      "lambda26_ecodata_ultima_ejecucion_timestamp": "1795148315"
+    },
+    "todasEnPrometheus": true
+  },
+  "kafkaFilasClima": 34784,
+  "duracionTotalS": 3612.4
+}
