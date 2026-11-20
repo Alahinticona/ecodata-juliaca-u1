@@ -19,6 +19,14 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    # --- INICIO DEL CAMBIO S14: Healthcheck ---
+    healthcheck:
+      test: ["CMD", "/opt/kafka/bin/kafka-broker-api-versions.sh", "--bootstrap-server", "localhost:9092"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 20s
+    # --- FIN DEL CAMBIO S14 ---
     networks:
       lambda26-kafka-net:
         aliases:
@@ -30,8 +38,11 @@ services:
     restart: unless-stopped
     command:
       - --kafka.server=kafka:9092
+    # --- CAMBIO S14: Esperar a que esté healthy ---
     depends_on:
-      - kafka
+      kafka:
+        condition: service_healthy
+    # -------------------------------------------
     ports:
       - "49308:9308"
     networks:
@@ -45,8 +56,11 @@ services:
     restart: unless-stopped
     ports:
       - "48085:8080"
+    # --- CAMBIO S14: Esperar a que esté healthy ---
     depends_on:
-      - kafka
+      kafka:
+        condition: service_healthy
+    # -------------------------------------------
     environment:
       KAFKA_CLUSTERS_0_NAME: lambda26
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
